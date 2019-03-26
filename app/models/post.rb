@@ -15,7 +15,7 @@ class Post < ActiveRecord::Base
 
   #def clickbait
    KEYWORDS.each do |keyword|
-      if Post.title.include?(keyword)
+      keyword.match 
     errors.add(:title, "clickbait")
   end
     end
