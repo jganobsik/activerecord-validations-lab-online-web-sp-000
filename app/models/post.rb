@@ -18,6 +18,5 @@ class Post < ActiveRecord::Base
       keyword.match title
     errors.add(:title, "clickbait")
   end
-    end
   end
 end
