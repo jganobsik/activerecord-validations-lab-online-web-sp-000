@@ -14,8 +14,8 @@ class Post < ActiveRecord::Base
   ]
 
   def clickbait?
-    if Post.Title.include?(KEYWORDS)
-    return false
+    if Post.title.include?(KEYWORDS)
+    errors.add(:customer_id, "is not active") unless customer.active?
     end
   end
 end
