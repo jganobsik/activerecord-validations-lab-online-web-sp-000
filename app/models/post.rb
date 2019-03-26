@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
     /Guess/i
   ]
 
-  def clickbait?
+  def clickbait
     if title.include?(KEYWORDS)
     errors.add(:title, "clickbait")
     end
